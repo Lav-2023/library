@@ -156,6 +156,11 @@ document.querySelector("#filterSelect").addEventListener("change", function() {
     filterLibrary(this.value);
 });
 
+document.querySelector("#showAllBooksBtn").addEventListener("click", function() {
+    document.querySelector("#filterSelect").value = "All"; // Reset dropdown to "All"
+    displayLibrary(myLibrary); // Show all books
+});
+
 // Function to Search Books
 function searchLibrary(query) {
     if (!query.trim()) { // Checks if query is empty or only spaces
