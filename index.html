@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Book Library</title>
+</head>
+<body>
+    <h1>Book Library</h1>
+    
+    <!-- Search Bar -->
+    <label for="searchInput">Search Books:</label>
+    <input type="text" id="searchInput" placeholder="Search by title or author">
+
+    <!-- Sorting Dropdown -->
+    <label for="sortSelect">Sort By:</label>
+    <select id="sortSelect">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="pages">Pages</option>
+    </select>
+    <label for="sortYearSelect">Sort By Published Year:</label>
+    <select id="sortYearSelect">
+        <option value="asc">Oldest to Newest</option>
+        <option value="desc">Newest to Oldest</option>
+    </select>
+
+    <!-- Filter Dropdown -->
+    <label for="filterSelect">Filter By Read Status:</label>
+    <select id="filterSelect">
+        <option value="All">All</option>
+        <option value="Read">Read</option>
+        <option value="Not Read">Not Read</option>
+    </select>
+    
+    <!-- Button to show all books again-->
+    <button id="showAllBooksBtn">Show All Books</button>
+    
+    <!-- Button to add new book-->
+    <button id="newBookBtn">Add New Book</button>
+
+    <!-- Book Form (Hidden initially) -->
+    <div id="bookFormContainer" style = "display: none;">
+        <form id="bookForm">
+            <label>Title: <input type="text" id="title" required></label><br>
+            <label>Author: <input type="text" id="author" required></label><br>
+            <label>Pages: <input type="number" id="pages" required></label><br>
+            <label>Published: <input type="number" id="published" required></label><br>
+            <label>Status: 
+                <select id="status">
+                    <option value="Not Read">Not Read</option>
+                    <option value="Read">Read</option>
+                </select>
+            </label><br>
+            <button type="submit">Add Book</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Undo Last Delete Button-->
+    <button id="undoBtn" style="display: none;" onclick="undoDelete()">Undo Last Delete</button>
+
+    <!-- Book Library Display-->
+    <div id="library"></div>
+</body>
+</html>
