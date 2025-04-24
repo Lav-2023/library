@@ -1,0 +1,107 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(244, 244, 8);
+    background-color: rgb(109, 50, 5);
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 2rem;
+    font-size: 3rem;
+    background-image: url("images/books-background.jpg");
+    padding: 1rem;
+    background-size: cover;
+    height: 400px;
+    color: rgb(141, 13, 6)
+}
+
+#library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.book-card {
+    width: 20rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: rgb(81, 8, 5);
+    border: 2px solid rgb(6, 241, 210);
+    background-color: rgb(136, 150, 85);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 8px rgba(208, 235, 4, 0.2);
+    transition: background-color 0.5s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.read-book {
+    background-color: rgb(193, 234, 168);
+    border: 3px solid rgb(193, 83, 240);
+}
+
+.unread-book {
+    background-color: rgb(237, 188, 185);
+    border: 3px solid rgb(6, 241, 210);
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(to bottom, #955de3, #e95dc3); /* Light gradient for a polished look */
+    border: 2px solid #56d3b6; /* Border to define the button edge */
+    border-radius: 10px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #57970d, #a74a07); /* Darker gradient on hover */
+    box-shadow: 1px #eded84; /* Enhance shadow for a raised effect */
+    transform: scale(1.1); /* Slightly increase button size */
+}
+
+#undoBtn {
+    background-color: #ff9800;
+    display: none;
+}
+
+#undoBtn:hover {
+    background-color: #e68900;
+}
+
+/* Search, Sort & Filter Inputs */
+input, select {
+    padding: 10px;
+    margin: 1rem;
+    border-radius: 5px;
+    border: 3px solid rgb(6, 241, 210);
+    font-weight: bold;
+}
+
+#searchInput {
+    width: 300px;
+}
+
+/* New Book Form */
+#bookFormContainer {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-weight: bold;
+}
+
